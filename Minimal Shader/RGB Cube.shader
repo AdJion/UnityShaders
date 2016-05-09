@@ -16,7 +16,7 @@ Shader"CG shader for RGB Cube"
 	       {
 	       		vertexOutput output;
 	       		output.pos=mul(UNITY_MATRIX_MVP,vertexPos);
-	       		output.col=vertexPos+float4(0.4,0.5,0.5,0);
+	       		output.col=vertexPos+float4(0.5,0.5,0.5,0);
 	       		return output;
 	       }
 	       float4 frag(vertexOutput input):COLOR
