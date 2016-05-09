@@ -7,7 +7,7 @@ Shader"CG Shader with all bulit-in vertex input parameters"
 			CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
-			//#include"CGUnity.cginc"
+			//#include"CGUnity.cginc"//包含内置头文件，就不需要下面的结构体，头文件的位置在Unity->Data->CGIncludes
 			struct VertexInput
 			{
 				float4 vertex:POSITION;
@@ -23,6 +23,7 @@ Shader"CG Shader with all bulit-in vertex input parameters"
 				float4 col:COLOR;
 			};
 
+			//VertexOutput vert(appdata_full input)//使用头文件的写法
 			VertexOutput vert(VertexInput input)
 			{
 				VertexOutput output;
